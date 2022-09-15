@@ -29,27 +29,30 @@ export const Card = () => {
 
   return (
     <>
-      {Homes &&
-        Homes.map((item, index) => {
-          let imgPath;
-          ImgList &&
-            ImgList.map((img) => {
-              return item.featured_media === img.id
-                ? (imgPath = img.guid.rendered)
-                : null;
-            });
+      <h3 className={Style.header}>Galleri over boliger</h3>
+      <section className={Style.galleryWrapper}>
+        {Homes &&
+          Homes.map((item, index) => {
+            let imgPath;
+            ImgList &&
+              ImgList.map((img) => {
+                return item.featured_media === img.id
+                  ? (imgPath = img.guid.rendered)
+                  : null;
+              });
 
-          return (
-            <section key={index} className={Style.wrapper}>
-              <img alt="hus" src={imgPath}></img>
-              <h4
-                dangerouslySetInnerHTML={{ __html: item.content.rendered }}
-              ></h4>
-              <p>Pris: {item.acf.price}</p>
-              <p>Adresse: {item.acf.address}</p>
-            </section>
-          );
-        })}
+            return (
+              <section key={index} className={Style.wrapper}>
+                <img alt="hus" src={imgPath}></img>
+                <h4
+                  dangerouslySetInnerHTML={{ __html: item.content.rendered }}
+                ></h4>
+                <p>Pris: {Number(item.acf.price).toLocaleString()} kr.</p>
+                <p>Adresse: {item.acf.address}</p>
+              </section>
+            );
+          })}
+      </section>
     </>
   );
 };

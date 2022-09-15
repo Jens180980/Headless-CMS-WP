@@ -1,6 +1,10 @@
 .wrapper {
-  width: 100vw;
-  margin: 2rem;
+  width: 100%;
+  padding: 0 1rem;
+
+  tr:nth-child(even) {
+    background-color: rgb(184, 246, 225);
+  }
 
   tr,
   thead {
@@ -20,10 +24,6 @@
 }
 
 .header {
-  margin: 2rem;
+  padding: 0 1rem;
   font-size: 3rem;
-}
-
-.wrapper tr:nth-child(even) {
-  background-color: aquamarine;
 }

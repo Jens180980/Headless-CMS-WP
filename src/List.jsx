@@ -29,7 +29,7 @@ export const List = () => {
           Homes.map((item) => {
             return (
               <tr key={item.id}>
-                <td>{item.acf.price}</td>
+                <td>{Number(item.acf.price).toLocaleString()} kr.</td>
                 <td>{item.acf.address}</td>
                 <td>{item.acf.area} m2</td>
               </tr>

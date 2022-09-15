@@ -5,7 +5,7 @@ import Style from "./app.module.scss";
 function App() {
   return (
     <>
-      <div className={Style.galleryWrapper}>
+      <div>
         <Card />
       </div>
       <div className={Style.listWrapper}>
