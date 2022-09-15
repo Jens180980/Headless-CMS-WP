@@ -1,0 +1,29 @@
+.wrapper {
+  width: 100vw;
+  margin: 2rem;
+
+  tr,
+  thead {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid black;
+
+    td,
+    th {
+      width: 100%;
+
+      text-align: left;
+    }
+  }
+}
+
+.header {
+  margin: 2rem;
+  font-size: 3rem;
+}
+
+.wrapper tr:nth-child(even) {
+  background-color: aquamarine;
+}
