@@ -10,7 +10,7 @@ export const Card = () => {
   useEffect(() => {
     const getData = async () => {
       const result = await axios.get(
-        `http://test.dev-footprint.nu/backend/wp-json/wp/v2/homes`
+        `http://dev.harderweb.dk/backend/wp-json/wp/v2/homes`
       );
       setHomes(result.data);
     };
@@ -20,7 +20,7 @@ export const Card = () => {
   useEffect(() => {
     const getImg = async () => {
       const result = await axios.get(
-        `http://test.dev-footprint.nu/backend/wp-json/wp/v2/media`
+        `http://dev.harderweb.dk/backend/wp-json/wp/v2/media`
       );
       setImgList(result.data);
     };
@@ -37,7 +37,7 @@ export const Card = () => {
             ImgList &&
               ImgList.map((img) => {
                 return item.featured_media === img.id
-                  ? (imgPath = img.guid.rendered)
+                  ? (imgPath = img.media_details.sizes.medium.source_url)
                   : null;
               });
 

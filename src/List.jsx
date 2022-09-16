@@ -8,7 +8,7 @@ export const List = () => {
   useEffect(() => {
     const getData = async () => {
       const result = await axios.get(
-        `http://test.dev-footprint.nu/backend/wp-json/wp/v2/homes`
+        `http://dev.harderweb.dk/backend/wp-json/wp/v2/homes`
       );
       setHomes(result.data);
     };
